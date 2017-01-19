@@ -1,4 +1,4 @@
 module.exports = {
   KEY : "ryAxHcqq9pVz2kzCxyLxQroGP",
-  SECRET : "HIDDEN"
+  SECRET : "FXzO02UyFro1zMEPxsdz8Litkvk38oJPLINps3pvDX23BjkIZI"
 };
