@@ -16,8 +16,10 @@
   app.post('/', function(req,res) {
     var twilio = require('twilio');
     var twiml = new twilio.TwimlResponse();
-    var SEARCH_QUERY = req.body.Body;
+    var SEARCH_QUERY = req.body.Body.trim().replace(' ', '_');
     var oAuth2 = new OAuth2(configs.KEY,configs.SECRET, 'https://api.twitter.com/', null, 'oauth2/token', null);
+
+
 
     oAuth2.getOAuthAccessToken('', { 'grant_type' : 'client_credentials'}, function(e, access_token) {
       var options = {
@@ -42,7 +44,7 @@
           var tweets = '';
           for(var i = 0; i < statuses.length; i++){
             var status = statuses[i].user.name + " said " +
-                          statuses[i].text + "\n";
+                          statuses[i].text + "\n\n";
             if((status.length + tweets.length) > 1600) break;
             tweets = tweets + status;
           }
