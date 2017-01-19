@@ -43,6 +43,7 @@
           for(var i = 0; i < statuses.length; i++){
             var status = statuses[i].user.name + " said " +
                           statuses[i].text + "\n";
+            if((status.length + tweets.length) > 1600) break;
             tweets = tweets + status;
           }
           console.log(tweets);
