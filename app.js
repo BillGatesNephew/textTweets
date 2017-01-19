@@ -26,7 +26,8 @@
         "&result_type=popular",
         headers: {
           Authorization: 'Bearer ' + access_token
-        };
+        }
+      };
 
       https.get(options, function(result) {
         var buffer = '';
