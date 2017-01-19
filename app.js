@@ -45,7 +45,7 @@
                           statuses[i].text + "\n";
             tweets = tweets + status;
           }
-
+          console.log(tweets);
           twiml.message(tweets);
           res.writeHead(200, {'Content-Type' : 'text/xml'});
           res.end(twiml.toString());
