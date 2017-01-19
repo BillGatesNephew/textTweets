@@ -17,7 +17,7 @@
     var twilio = require('twilio');
     var twiml = new twilio.TwimlResponse();
     var SEARCH_QUERY = req.body.Body;
-    var oAuth2 = new OAuth2(configs.KEY,config.SECRET, 'https://api.twitter.com/', null, 'oauth2/token', null);
+    var oAuth2 = new OAuth2(configs.KEY,configs.SECRET, 'https://api.twitter.com/', null, 'oauth2/token', null);
 
     oAuth2.getOAuthAccessToken('', { 'grant_type' : 'client_credentials'}, function(e, access_token) {
       var options = {
