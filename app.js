@@ -42,7 +42,7 @@
           var tweets = '';
           for(var i = 0; i < statuses.length; i++){
             var status = statuses[i].user.name + " said " +
-                          tweets[i].text + "\n";
+                          statuses[i].text + "\n";
             tweets = tweets + status;
           }
 
